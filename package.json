@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "express-ts-starter",
+  "author": {
+    "name": "Md Tanvir Ahamed Shanto",
+    "email": "mdtanvirahamedshanto@gmail.com"
+  },
+  "description": "A simple express typescript starter template",
+  "version": "1.0.0",
+  "keywords": [
+    "express",
+    "typescript",
+    "tailwindcss",
+    "prisma",
+    "starter"
+  ],
+  "homepage": "https://github.com/mdtanvirahamedshanto/express-ts-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdtanvirahamedshanto/express-ts-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mdtanvirahamedshanto/express-ts-starter/issues"
+  },
+  "module": "src/app.ts",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node dist/app.js",
+    "dev": "tsx watch --require tsconfig-paths/register ./src/app.ts",
+    "build": "rimraf /dist && tsc --noEmit && npm run lint &&  swc src -d  dist --out-dir dist strip-leading-paths",
+    "lint": "eslint ./src",
+    "format": "prettier --write 'src/**/*.{ts,js,json,md}'",
+    "test": "vitest",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "prepare": "husky",
+    "lint-staged": "lint-staged --concurrent false",
+    "cli": "tsx  ./script/index.ts"
+  },
+  "dependencies": {
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "supertest": "^7.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.10.11",
+    "@types/bun": "latest",
+    "@types/compression": "^1.7.5",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.12.0",
+    "@types/supertest": "^6.0.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
+    "vitest": "^3.0.4",
+    "winston": "^3.17.0"
+  },
+  "_moduleAliases": {
+    "@": "dist"
+  }
+}
