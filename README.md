@@ -1,14 +1,21 @@
-# express-ts-starter
+# 🚀 express-ts-starter
 
-### Features
+A feature-rich Express.js boilerplate with TypeScript support, scalable folder structure, custom import aliases, CLI-based module generation, and built-in linting + formatting support. Perfect for starting REST APIs fast with maintainability in mind.
 
-- Basic Express Server
-- import aliases like ` @/controller` instead of `../../controller`
-- Linting and Formatting, pre-commit
-- Standard Fold Structure
-- Custom import aliases
-- TypeScript Support and Config
-- Basic CLI for crating new module
+---
+
+## ✨ Features
+
+- ✅ TypeScript Support
+- ✅ Clean & Scalable Folder Structure
+- ✅ Module-Based CLI Generator
+- ✅ Custom Import Aliases (`@/controller`, `@/service`, etc.)
+- ✅ ESLint + Prettier + Husky for Clean Code & Pre-commit
+- ✅ Centralized Error & Validation Middleware
+- ✅ Configurable Environment & Logging
+- ✅ Mongoose or Sequelize Ready
+
+---
 
 ### How to use CLI
 
@@ -25,7 +32,7 @@ make cli
 - It will ask you module name
 - Based on that will create controller, route and validation files inside API folder
 
-### Recommended Folder Structure:
+## 📁 Recommended Folder Structure:
 
 ```bash
 
@@ -97,3 +104,49 @@ project-root/
 
 
 ```
+
+# ✅ Scripts
+
+Script Description
+npm start Start compiled server
+npm run dev Start server in dev mode using ts-node-dev
+npm run build Build TypeScript files to /dist
+npm run lint Run ESLint
+npm run cli Run custom CLI for generating modules
+
+# ⚙️ Technologies Used
+
+- Express.js
+
+- TypeScript
+
+- ESLint + Prettier
+
+- Husky (pre-commit lint)
+
+- Zod / Joi (for validation – configurable)
+
+- Mongoose or Sequelize (based on setup)
+
+# 🧪 Future Improvements
+
+✅ Docker support
+
+✅ Swagger documentation integration
+
+✅ Testing (Jest + Supertest)
+
+✅ Authentication examples (JWT, Sessions)
+
+📄 License
+MIT License — free to use, modify, and distribute.
+
+🙌 Contributing
+PRs are welcome. Please lint before pushing:
+
+```bash
+npm run lint
+```
+
+💡 Inspiration
+Built for backend developers who want a clean, scalable, and maintainable starter for Express + TypeScript.
